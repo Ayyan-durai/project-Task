@@ -1,0 +1,51 @@
+<div class="add-button">
+  <button  mat-stroked-button  routerLink="/body-component">Product Detail</button>
+</div>
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <div class="container">
+    <div class="input">
+    <h2>Product Detail</h2>
+
+    <div class="name">
+      <mat-form-field appearance="outline">
+        <mat-label>Product Name</mat-label>
+        <input type="text"  formControlName="productName" matInput placeholder="Enter the Product Name">
+        <mat-error *ngIf="form.get('productName')">Invalid Name</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="model">
+      <mat-form-field appearance="outline">
+        <mat-label>Model</mat-label>
+        <input type="text"   formControlName="model"  matInput placeholder="Enter the Product Model" >
+        <mat-error *ngIf="form.get('model')">Invalid Model</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="ram">
+      <mat-form-field appearance="outline">
+        <mat-label>Ram</mat-label>
+        <input type="text"  formControlName="ram"  matInput placeholder="Enter the Product Ram">
+        <mat-error *ngIf="form.get('ram')">Invalid RAM</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="storage">
+      <mat-form-field appearance="outline">
+        <mat-label>Storage</mat-label>
+        <input type="text"  formControlName="storage"  matInput placeholder="Enter the Product Storage">
+        <mat-error *ngIf="form.get('storage')">Invalid Storage</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="rate">
+      <mat-form-field appearance="outline">
+        <mat-label>Rate</mat-label>
+        <input type="text"  formControlName="rate"  matInput placeholder="Enter the Product rate">
+        <mat-error *ngIf="form.get('rate')">Invalid Rate</mat-error>
+      </mat-form-field>
+    </div>
+    </div>
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button   routerLink="/body-component" >Cancel</button>
+      <button mat-raised-button type="submit" [disabled]="form.invalid" (click)="submit()" routerLink="/body-component">Submit</button>
+    </div>
+  </div>
+</form>
+

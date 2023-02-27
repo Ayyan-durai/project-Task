@@ -1,0 +1,41 @@
+<form [formGroup]="form"  novalidate>
+  <div class="container">
+    <div class="input">
+      <h2>Edit Product Detail</h2>
+      <div class="name">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Name</mat-label>
+          <input type="text" minlength="3"   formControlName="Name" matInput placeholder="Enter the Product Name">
+        </mat-form-field>
+      </div>
+      <div class="model">
+        <mat-form-field appearance="outline">
+          <mat-label>Model</mat-label>
+          <input type="text"    matInput  formControlName="model" placeholder="Enter the Product Model" >
+        </mat-form-field>
+      </div>
+      <div class="ram">
+        <mat-form-field appearance="outline">
+          <mat-label>Ram</mat-label>
+          <input type="text"     matInput  formControlName="ram" placeholder="Enter the Product Ram">
+        </mat-form-field>
+      </div>
+      <div class="storage">
+        <mat-form-field appearance="outline">
+          <mat-label>Storage</mat-label>
+          <input type="text"   matInput  formControlName="storage" placeholder="Enter the Product Storage">
+        </mat-form-field>
+      </div>
+      <div class="rate">
+        <mat-form-field appearance="outline">
+          <mat-label>Rate</mat-label>
+          <input type="text"  matInput  formControlName="rate" placeholder="Enter the Product rate">
+        </mat-form-field>
+      </div>
+    </div>
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button matDialogClose >Cancel</button>
+      <button mat-raised-button type="submit" [disabled]="form.invalid" (click)="update()" matDialogClose>Submit</button>
+    </div>
+  </div>
+</form>

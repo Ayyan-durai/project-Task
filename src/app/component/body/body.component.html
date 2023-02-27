@@ -1,0 +1,35 @@
+<div class="button">
+<div class="add-button">
+  <input type="text" placeholder="Search" autocomplete="off"
+       [(ngModel)]="value"   >
+  <button  mat-stroked-button  routerLink="/add-component" >Add</button>
+</div>
+</div>
+<div class="container">
+  <h1>Product </h1>
+<div class="card">
+<div class="cardLoop"  *ngFor="let l of object | filter:value; let i=index ">
+<mat-card>
+
+  <mat-card-title>Product Detail</mat-card-title>
+  <mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Product Name: {{l.productName}}</li>
+        <li>Model: {{l.model}}</li>
+        <li>Ram: {{l.ram+'GB'}}</li>
+        <li>Storage: {{l.storage+'GB'}}</li>
+        <li>Rate: {{l.rate | currency:'INR':'symbol':'1.0-0'}}</li>
+
+      </ul>
+
+    </mat-card-content>
+  </mat-card-header>
+  <mat-card-actions align="end">
+      <button mat-button (click)="openDialogDelete(i,'edit')">Edit</button>
+    <button mat-button (click)=" openDialogDelete(i,'delete')">Delete</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+</div>
+</div>

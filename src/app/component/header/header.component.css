@@ -1,0 +1,16 @@
+.header{
+  padding: 1px;
+  color: white;
+  font-size: 12px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-button button{
+  margin:10px;
+  color: white;
+}
+.container{
+  background-color: #1abc9c;
+}

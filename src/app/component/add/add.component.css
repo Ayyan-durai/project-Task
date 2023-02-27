@@ -1,0 +1,23 @@
+.container,
+  input::placeholder{
+  font: 14px sans-serif;
+}
+.container
+ button{
+  margin:10px;
+}
+.add-button{
+  margin: 10px 10px 10px 850px;
+}
+.container{
+  border: 2px solid black;
+}
+.container .input{
+margin: 10px 10px 10px 402px;
+}
+.container .input h2{
+  position: relative;
+  right: 30px;
+  padding: 10px;
+  font-size: 40px;
+}

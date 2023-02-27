@@ -1,0 +1,19 @@
+.cardLoop{
+  margin: 10px;
+
+}
+.card {
+  border-top: 2px solid black;
+height: 450px;
+  overflow: auto;
+}
+
+.button{
+  margin: 10px 10px 10px 748px;
+}
+.container{
+  border: 2px solid black;
+}
+.add-button input{
+  margin: 10px;
+}
